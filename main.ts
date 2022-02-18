@@ -111,10 +111,12 @@ basic.forever(function () {
         basic.pause(100)
         v = randint(1, 2)
         if (led.point(2, 3)) {
-            if (led.point(1, 3) && led.point(3, 3)) {
+            if (led.point(1, 3)) {
                 if (v == 1) {
                     led.plot(4, 3)
                 }
+            }
+            if (led.point(3, 3)) {
                 if (v == 2) {
                     led.unplot(0, 3)
                 }
